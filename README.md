@@ -81,8 +81,8 @@ Run 10: Secs
 Run 1: 606 Secs<br/>
 Run 2: 611 Secs<br/>
 Run 3: 597 Secs<br/>
-Run 4:   Secs<br/>
-Run 5:   Secs<br/>
+Run 4: 595 Secs<br/>
+Run 5: 607 Secs<br/>
 Run 6:   Secs<br/>
 Run 7:   Secs<br/>
 Run 8:   Secs<br/>
@@ -90,7 +90,7 @@ Run 9:   Secs<br/>
 Run 10:   Secs<br/>
 
 ## 3. Oracle ##
-* Vagrant file for Oracle 18.3 can be found here
+* Vagrant file for Oracle 18.3 can be found <a href= "https://github.com/oracle/vagrant-boxes/tree/master/OracleDatabase/18.3.0">here</a>.
     * Oracle running on noarchivelog, no audit, 
     * DDL statement for creating the table/index can be found here
 
