@@ -19,9 +19,7 @@ This document:
 * does not constitute a "good practice" example. As you can read below (see "Why row-by-row?") the process flow is inherently flawed.
 
 ### Why row-by-row? ###
-Because I'm trying to use MongoDB (which is currently in production in our environment) as a basis for comparison. Our datastore is receiving large number of documents from a "compute farm" comprised of thousands of compute nodes. Therefore each insert legitimately constitutes a transaction.
-
-Yes, I know that sending large number of single inserts directly to a datastore is borderline lunacy. I know that perhaps collecting incoming messages into (e.g.) Kafka and doing periodical bulk-inserts leads to better performance and more efficient resource usage. The existing architecture is what it is.
+Because I'm trying to use MongoDB (which is currently in production in our environment) as a basis for comparison. Our datastore is receiving large number of documents from a "compute farm" comprised of thousands of compute nodes. Therefore each insert legitimately constitutes a transaction. Therefore the "autocommit" connection parameter for both PostgreSQL and Oracle is set to True.
 
 ### The Environment ###
 **Clients:**
