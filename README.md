@@ -19,7 +19,7 @@ This document:
 * does not constitute a "good practice" example. As you can read below (see "Why row-by-row?") the process flow is inherently flawed.
 
 ### Why row-by-row? ###
-Because I'm trying to use MongoDB (which is currently in production in our environment) as a basis for comparison. Our datastore is receiving large number of documents from a "compute farm" comprised of thousands of compute nodes. Therefore each insert legitimately constitutes a transaction. Therefore the "autocommit" connection parameter for both PostgreSQL and Oracle is set to True.
+Because I'm trying to use MongoDB (which is currently in production in our environment) as a basis for comparison. Our datastore is receiving a large number of documents from a "compute farm" comprised of thousands of VMs. Therefore the "autocommit" connection parameter for both PostgreSQL and Oracle is set to True, because each insert legitimately constitutes a transaction.
 
 ### The Environment ###
 **Clients:**
@@ -75,7 +75,7 @@ Run 10: Secs
 ## 2. PostgreSQL ##
 * Vagrant file for PostgreSQL 11.2 can be found <a href="https://github.com/babak4/OneMillionDocs/blob/master/vagrant_boxes/PostgreSQL/Vagrantfile">here</a>.
     * using default "postgres" database
-    * DDL statement for creating the table/index can be found here
+    * DDL statement for creating the table/index can be found <a href="https://github.com/babak4/OneMillionDocs/blob/master/vagrant_boxes/PostgreSQL/scripts/DDL.sql">here</a>.
 
 ### Recorded Times ###
 Run 1: 606 Secs<br/>
