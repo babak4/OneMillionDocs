@@ -54,3 +54,56 @@ Payload is made of JSON documents like this:
 The "_id" field is explicitly referenced and generated because each document in MongoDB will automatically be allocated one.
 
 Also the "_id" field is indexed in PostgreSQL/Oracle because MongoDB automatically indexes the field.
+
+## 1. MongoDB ##
+* The vagrant file for the MongoDB server VM can be found <a href="https://github.com/babak4/OneMillionDocs/blob/master/vagrant_boxes/mongoDB/Vagrantfile">here</a>.
+
+**Note 1:** I have run the test without generation of the "_id" field (MongoDB automatically generates it), but the results did not show a meaningful difference. I have kept the "_id" field so that the payload across three databases/datastores is identical.
+
+**Note 2:** Remember that every insert in mongo is inherently a transaction.
+
+### Recorded Times ###
+Run 1: Secs
+Run 2: Secs
+Run 3: Secs
+Run 4: Secs
+Run 5: Secs
+Run 6: Secs
+Run 7: Secs
+Run 8: Secs
+Run 9: Secs
+Run 10: Secs
+
+## 2. PostgreSQL ##
+* Vagrant file for PostgreSQL 11.2 can be found <a href="https://github.com/babak4/OneMillionDocs/blob/master/vagrant_boxes/PostgreSQL/Vagrantfile">here</a>.
+    * using default "postgres" database
+    * DDL statement for creating the table/index can be found here
+
+### Recorded Times ###
+Run 1: 606 Secs<br/>
+Run 2: 611 Secs<br/>
+Run 3: 597 Secs<br/>
+Run 4:   Secs<br/>
+Run 5:   Secs<br/>
+Run 6:   Secs<br/>
+Run 7:   Secs<br/>
+Run 8:   Secs<br/>
+Run 9:   Secs<br/>
+Run 10:   Secs<br/>
+
+## 3. Oracle ##
+* Vagrant file for Oracle 18.3 can be found here
+    * Oracle running on noarchivelog, no audit, 
+    * DDL statement for creating the table/index can be found here
+
+### Recorded Times ###
+Run 1:   Secs<br/>
+Run 2:   Secs<br/>
+Run 3:   Secs<br/>
+Run 4:   Secs<br/>
+Run 5:   Secs<br/>
+Run 6:   Secs<br/>
+Run 7:   Secs<br/>
+Run 8:   Secs<br/>
+Run 9:   Secs<br/>
+Run 10:   Secs<br/>
