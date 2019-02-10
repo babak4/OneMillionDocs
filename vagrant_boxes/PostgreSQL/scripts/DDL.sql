@@ -18,7 +18,7 @@ ALTER TABLE public.onemilliondocs
 
 -- DROP INDEX public.onemilliondocs_expr_idx;
 
-CREATE INDEX onemilliondocs_expr_idx
+CREATE UNIQUE INDEX onemilliondocs_expr_idx
     ON public.onemilliondocs USING btree
     (("Document" ->> '_id'::text) COLLATE pg_catalog."default")
     TABLESPACE pg_default;

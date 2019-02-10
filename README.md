@@ -91,17 +91,21 @@ Run 10: 621 Secs<br/>
 
 ## 3. Oracle ##
 * Vagrant file for Oracle 18.3 can be found <a href= "https://github.com/oracle/vagrant-boxes/tree/master/OracleDatabase/18.3.0">here</a>.
-    * Oracle running on noarchivelog, no audit, 
-    * DDL statement for creating the table/index can be found here
+    * Oracle running on noarchivelog, with the following changed parameters:
+        * sga_max_size = 2G
+        * sga_target = 1152M
+        * pga_aggregate_limit = 2G
+        * pga_aggregate_target = 384M
+    * DDL statement for creating the table/index can be found <a href="https://github.com/babak4/OneMillionDocs/blob/master/vagrant_boxes/Oracle/DDL.sql">here</a>.
 
 ### Recorded Times ###
-Run 1:   Secs<br/>
-Run 2:   Secs<br/>
-Run 3:   Secs<br/>
-Run 4:   Secs<br/>
-Run 5:   Secs<br/>
-Run 6:   Secs<br/>
-Run 7:   Secs<br/>
-Run 8:   Secs<br/>
-Run 9:   Secs<br/>
-Run 10:   Secs<br/>
+Run 1: 499 Secs<br/>
+Run 2: 509 Secs<br/>
+Run 3: 510 Secs<br/>
+Run 4: 459 Secs<br/>
+Run 5: 428 Secs<br/>
+Run 6: 433 Secs<br/>
+Run 7: 455 Secs<br/>
+Run 8: 407 Secs<br/>
+Run 9: 471 Secs<br/>
+Run 10: 449 Secs<br/>
