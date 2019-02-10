@@ -83,11 +83,11 @@ Run 2: 611 Secs<br/>
 Run 3: 597 Secs<br/>
 Run 4: 595 Secs<br/>
 Run 5: 607 Secs<br/>
-Run 6:   Secs<br/>
-Run 7:   Secs<br/>
-Run 8:   Secs<br/>
-Run 9:   Secs<br/>
-Run 10:   Secs<br/>
+Run 6: 629 Secs<br/>
+Run 7: 599 Secs<br/>
+Run 8: 597 Secs<br/>
+Run 9: 574 Secs<br/>
+Run 10: 621 Secs<br/>
 
 ## 3. Oracle ##
 * Vagrant file for Oracle 18.3 can be found <a href= "https://github.com/oracle/vagrant-boxes/tree/master/OracleDatabase/18.3.0">here</a>.
