@@ -1,13 +1,8 @@
 -- Table: public.onemilliondocs
 
--- DROP TABLE public.onemilliondocs;
-
-CREATE TABLE public.onemilliondocs
+CREATE TABLE onemilliondocs
 (
     "Document" jsonb
-)
-WITH (
-    OIDS = FALSE
 )
 TABLESPACE pg_default;
 
@@ -16,9 +11,6 @@ ALTER TABLE public.onemilliondocs
 
 -- Index: onemilliondocs_expr_idx
 
--- DROP INDEX public.onemilliondocs_expr_idx;
-
 CREATE UNIQUE INDEX onemilliondocs_expr_idx
-    ON public.onemilliondocs USING btree
-    (("Document" ->> '_id'::text) COLLATE pg_catalog."default")
+    ON public.onemilliondocs (("Document" ->> '_id'))
     TABLESPACE pg_default;

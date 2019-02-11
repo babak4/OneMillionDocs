@@ -2,6 +2,9 @@
 ## Comparing speed of row-by-row JSON document insert operation 
 ## on MongoDB(4.0.6), PostgreSQL(11.2), and Oracle (18.3)
 
+Babak Tourani (babak4@gmail.com)
+Feb 2019
+
 **Disclaimer**: This is NOT a benchmark test! 
 
 ### Abstract ###
@@ -60,34 +63,38 @@ Also the "_id" field is indexed in PostgreSQL/Oracle because MongoDB automatical
 
 **Note 2:** Remember that every insert in mongo is inherently a transaction.
 
-### Recorded Times ###
-Run 1: Secs
-Run 2: Secs
-Run 3: Secs
-Run 4: Secs
-Run 5: Secs
-Run 6: Secs
-Run 7: Secs
-Run 8: Secs
-Run 9: Secs
-Run 10: Secs
+### Recorded Times###
+Run 1: 467 Secs<br/>
+Run 2: 523 Secs<br/>
+Run 3: 541 Secs<br/>
+Run 4: 489 Secs<br/>
+Run 5: 462 Secs<br/>
+Run 6: 483 Secs<br/>
+Run 7: 476 Secs<br/>
+Run 8: 487 Secs<br/>
+Run 9: 521 Secs<br/>
+Run 10: 456 Secs<br/>
+
+Avg: 490 Secs
 
 ## 2. PostgreSQL ##
 * Vagrant file for PostgreSQL 11.2 can be found <a href="https://github.com/babak4/OneMillionDocs/blob/master/vagrant_boxes/PostgreSQL/Vagrantfile">here</a>.
     * using default "postgres" database
     * DDL statement for creating the table/index can be found <a href="https://github.com/babak4/OneMillionDocs/blob/master/vagrant_boxes/PostgreSQL/scripts/DDL.sql">here</a>.
 
-### Recorded Times ###
-Run 1: 606 Secs<br/>
-Run 2: 611 Secs<br/>
-Run 3: 597 Secs<br/>
-Run 4: 595 Secs<br/>
-Run 5: 607 Secs<br/>
-Run 6: 629 Secs<br/>
-Run 7: 599 Secs<br/>
-Run 8: 597 Secs<br/>
-Run 9: 574 Secs<br/>
-Run 10: 621 Secs<br/>
+### Recorded Times###
+Run 1: 590 Secs<br/>
+Run 2: 610 Secs<br/>
+Run 3: 659 Secs<br/>
+Run 4: 648 Secs<br/>
+Run 5: 668 Secs<br/>
+Run 6: 645 Secs<br/>
+Run 7: 590 Secs<br/>
+Run 8: 636 Secs<br/>
+Run 9: 582 Secs<br/>
+Run 10: 566 Secs<br/>
+
+Avg: 619 Secs
 
 ## 3. Oracle ##
 * Vagrant file for Oracle 18.3 can be found <a href= "https://github.com/oracle/vagrant-boxes/tree/master/OracleDatabase/18.3.0">here</a>.
@@ -109,3 +116,28 @@ Run 7: 455 Secs<br/>
 Run 8: 407 Secs<br/>
 Run 9: 471 Secs<br/>
 Run 10: 449 Secs<br/>
+
+Avg: 462 Secs
+
+## Summary of results ##
+
+Inserting 1M documents, row-by-row
+
+<table>
+    <tr>
+        <td><b>Database/Datastore</b></td><td><b>Avg Time Over 10 Runs (Secs)</b></td>
+    </tr>
+    <tr>
+        <td>Oracle 18c (18.3.0)</td><td>462</td>
+    </tr>
+    <tr>
+        <td>MongoDB (4.0.6)</td><td>490</td>
+    </tr>
+    <tr>
+        <td>PostgreSQL 11.2</td><td>619</td>
+    </tr>
+</table>
+
+### WIP ###
+* Multithreaded row-by-row insert comparison
+* Bulk Inserts comparison
