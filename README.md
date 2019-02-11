@@ -97,7 +97,7 @@ Run 10: 566 Secs<br/>
 Avg: 619 Secs
 
 ## 3. Oracle ##
-* Vagrant file for Oracle 18.3 can be found <a href= "https://github.com/oracle/vagrant-boxes/tree/master/OracleDatabase/18.3.0">here</a>.
+* Vagrant file for Oracle 18.3 can be found <a href="https://github.com/oracle/vagrant-boxes/tree/master/OracleDatabase/18.3.0">here</a>.
     * Oracle running on noarchivelog, with the following changed parameters:
         * sga_max_size = 2G
         * sga_target = 1152M
