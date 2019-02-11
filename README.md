@@ -2,7 +2,7 @@
 ## Comparing speed of row-by-row JSON document insert operation 
 ## on MongoDB(4.0.6), PostgreSQL(11.2), and Oracle (18.3)
 
-Babak Tourani (babak4@gmail.com)
+Babak Tourani (babak4@gmail.com)<br/>
 Feb 2019
 
 **Disclaimer**: This is NOT a benchmark test! 
@@ -10,8 +10,9 @@ Feb 2019
 ### Abstract ###
 To make one million single transactions (inserts) using JSON documents and compare the time it takes to carry out the task on each database/datastore.
 
-### Note ###
+You can use the <a href="https://github.com/babak4/OneMillionDocs/blob/master/OneMillionDocs.ipynb">Jupyter Notebook in this repository</a> to re-run the tests.
 
+### Note ###
 This is an experiment based on (and not exactly the same as) a use-case that my company is dealing with, which is: numerous single JSON doc inserts in MongoDB (via large number of connections). Perhaps this is not a common use-case, although gathering high-frequency IOT data would resemble this workload.
 
 This document:
