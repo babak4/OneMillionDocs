@@ -20,7 +20,7 @@ This document:
     - it's only comparing one single specific "insert" scenario
     - it relies on different (Python) client libraries for each database/datastore which either one could be inefficient/buggy. Afterall, they are all developped by human beings!
 * can not be used as an evidence that either database/data store is "better than the others" for insert operations, because it's testing only one type of insert operation: row-by-row (a.k.a. "slow-by-slow" in Oracle lingo).
-* does not constitute a "good practice" example. As you can read below (see "Why row-by-row?") the process flow is inherently flawed.
+* does not constitute a "good practice" example, whether in terms of patterns used (if any) in writing the Python code, or how a Jupyter Notebook is used, or even with regards to efficiency of dealing with such workload. It merely aims to gather information regarding the speed of the insert operation.
 
 ### Why row-by-row? ###
 Because I'm trying to use MongoDB (which is currently in production in our environment) as a basis for comparison. Our datastore is receiving a large number of documents from a "compute farm" comprised of thousands of VMs. Therefore the "autocommit" connection parameter for both PostgreSQL and Oracle is set to True, because each insert legitimately constitutes a transaction.
