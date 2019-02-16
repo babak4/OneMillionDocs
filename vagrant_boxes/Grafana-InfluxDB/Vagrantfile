@@ -1,0 +1,30 @@
+
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "ol7-latest"
+  config.vm.box_url = "https://yum.oracle.com/boxes/oraclelinux/latest/ol7-latest.box"
+  config.vm.box_check_update = false
+  config.vm.synced_folder "shared/", "/shared", create: true
+  config.vm.network "forwarded_port", guest: 8086, host: 8086
+  config.vm.network "forwarded_port", guest: 8088, host: 8088
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
+  config.vm.hostname = "grafalux.btg.com"
+  config.vm.network :private_network, ip: "192.168.14.110"
+
+  config.vm.define "grafalux" do |grafalux|
+    
+    grafalux.vm.provider "virtualbox" do |vb|
+      vb.customize ["modifyvm", :id, "--audio", "none"]
+      vb.name = "grafaluxDB"
+      vb.cpus = 1
+      vb.memory = 2048
+    end
+
+    grafalux.vm.provision "file", source: "files/influxdb.repo", destination: "/tmp/influxdb.repo"
+    grafalux.vm.provision "file", source: "files/grafana.repo", destination: "/tmp/grafana.repo"
+    grafalux.vm.provision "file", source: "files/datasource.yaml", destination: "/tmp/datasource.yaml"
+    # grafalux.vm.provision "file", source: "files/mongod.conf", destination: "/tmp/mongod.conf"
+    grafalux.vm.provision :shell, path: "files/provision.sh"
+  end
+  
+end
