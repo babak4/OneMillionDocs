@@ -1,0 +1,28 @@
+
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "ol76-ga-upd-epel"
+#  config.vm.box_url = "https://yum.oracle.com/boxes/oraclelinux/latest/ol7-latest.box"
+  config.vm.box_check_update = false
+  config.vm.synced_folder "shared/", "/shared", create: true
+  config.vm.network "forwarded_port", guest: 9092, host: 9092
+  config.vm.network "forwarded_port", guest: 9093, host: 9093
+  config.vm.network "forwarded_port", guest: 9094, host: 9094
+
+  config.vm.define "kafka" do |kafka|
+    
+    kafka.vm.provider "virtualbox" do |vb|
+      vb.customize ["modifyvm", :id, "--audio", "none"]
+      vb.name = "Apache Kafka"
+      vb.cpus = 2
+      vb.memory = 4096
+    end
+
+    kafka.vm.hostname = "kafka.btg.com"
+    kafka.vm.network :private_network, ip: "192.168.14.105"
+    kafka.vm.provision "file", source: "files/zookeeper.service", destination: "/tmp/zookeeper.service"
+    kafka.vm.provision "file", source: "files/kafka.service", destination: "/tmp/kafka.service"
+    kafka.vm.provision :shell, path: "files/provision.sh"
+  end
+  
+end

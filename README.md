@@ -12,6 +12,11 @@ To make one million single transactions (inserts) using JSON documents and compa
 
 You can use the <a href="https://github.com/babak4/OneMillionDocs/blob/master/OneMillionDocs.ipynb">Jupyter Notebook in this repository</a> to re-run the tests.
 
+### TL;DR ###
+Oracle can handle the workload described in this test, faster than MongoDB.
+
+**Update**: Kafka (single node broker with ZERO configuration changes compared to the <a href="https://kafka.apache.org/quickstart">Apache Kafka Quickstart Guide</a> proved to be 3X faster than any of the other data stores. Details coming up, soon.
+
 ### Note ###
 This is an experiment based on (and not exactly the same as) a use-case that my company is dealing with, which is: numerous single JSON doc inserts in MongoDB (via large number of connections). Perhaps this is not a common use-case, although gathering high-frequency IOT data would resemble this workload.
 
