@@ -1,0 +1,47 @@
+import psycopg2, json
+from DB_Connectors.config_manager import get_db_config
+import threading
+
+class PostgresqlConnector:
+
+    def __init__(self, logger, dop=1):
+
+        self._logger = logger
+        self._logger.info("Retrieved the configuartion for Postgresql from config.ini")
+
+        config = get_db_config("postgresql")
+        self._logger.info("Connection String: " + config['host'] + ":" + config['port'] + "/" + config['database'])
+
+        self.connection = psycopg2.connect(database=config['database'], user=config['user'], password=config['password'], host=config['host'], port=config['port'])
+        self.connection.autocommit = True
+
+        self._collection_name = config['tablename']
+
+
+    def single_thread_insert_docs(self, document_collection):
+        postgres_cursor = self.connection.cursor()
+        self._logger.info("Inserting the documents into " + self._collection_name)
+
+        for idx in range(len(document_collection)):
+            postgres_cursor.execute("INSERT INTO " + self._collection_name + " VALUES (%s)", (document_collection[idx][0],))
+        self._logger.info("inserted " + str(len(document_collection)) + " collections into " + self._collection_name)
+        
+        postgres_cursor.close()
+
+
+    def insert_docs(self, document_collection_chunks):
+        threads = []
+        for chunk in document_collection_chunks:
+            t = threading.Thread(target=self.single_thread_insert_docs, args=(chunk, ))
+            t.start()
+            threads.append(t)
+        
+        for thread in threads:
+            thread.join()
+
+
+    def truncate_collection(self):
+        postgres_cursor = self.connection.cursor()
+        postgres_cursor.execute("truncate table {}".format(self._collection_name))
+        self._logger.info("Dropped the collection: " + self._collection_name)
+        postgres_cursor.close()

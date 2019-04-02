@@ -1,0 +1,536 @@
+2019-03-30 12:30:19,238 - __main__ - INFO - **** ************************* ****
+2019-03-30 12:30:19,238 - __main__ - INFO - **** Starting a DB Insert Test ****
+2019-03-30 12:30:19,239 - __main__ - INFO - DB: oracle
+2019-03-30 12:30:19,239 - __main__ - INFO - Number of Threads: 1
+2019-03-30 12:30:19,239 - __main__ - INFO - Number of Iterations: 10
+2019-03-30 12:30:19,239 - __main__ - INFO - Number of Messages: 10000
+2019-03-30 12:30:19,239 - __main__ - INFO - Size of Messages (chars): 100
+2019-03-30 12:30:19,239 - __main__ - INFO - generating documents...
+2019-03-30 12:30:19,526 - __main__ - INFO - 10000 documents generated as test data!
+2019-03-30 12:30:19,526 - __main__ - INFO - Initiating DB_Manager instance...
+2019-03-30 12:30:19,527 - __main__ - INFO - Retrieved the configuartion for Oracle from config.ini
+2019-03-30 12:30:19,527 - __main__ - INFO - Connecting to Oracle on: localhost:1521/ORCLPDB1
+2019-03-30 12:30:19,527 - __main__ - DEBUG - Username: json_docs
+2019-03-30 12:30:19,884 - __main__ - INFO - Connection established to Oracle on: localhost:1521/ORCLPDB1
+2019-03-30 12:30:19,884 - __main__ - INFO - Initiated the connection to oracle
+2019-03-30 12:30:19,884 - __main__ - INFO - Starting the insert runs...
+2019-03-30 12:30:19,884 - __main__ - INFO - Starting Run# 1
+2019-03-30 12:30:19,960 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 12:30:19,961 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 12:30:27,917 - __main__ - INFO - inserted 10000 collections into onemilliondocs
+2019-03-30 12:30:27,917 - __main__ - INFO - Storing 10000 documents in oracle finished in 8 seconds.
+2019-03-30 12:30:27,918 - __main__ - INFO - Starting Run# 2
+2019-03-30 12:30:27,989 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 12:30:27,989 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 12:30:33,593 - __main__ - INFO - inserted 10000 collections into onemilliondocs
+2019-03-30 12:30:33,593 - __main__ - INFO - Storing 10000 documents in oracle finished in 6 seconds.
+2019-03-30 12:30:33,593 - __main__ - INFO - Starting Run# 3
+2019-03-30 12:30:33,712 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 12:30:33,712 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 12:30:38,707 - __main__ - INFO - inserted 10000 collections into onemilliondocs
+2019-03-30 12:30:38,707 - __main__ - INFO - Storing 10000 documents in oracle finished in 5 seconds.
+2019-03-30 12:30:38,707 - __main__ - INFO - Starting Run# 4
+2019-03-30 12:30:38,745 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 12:30:38,745 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 12:30:52,058 - __main__ - INFO - inserted 10000 collections into onemilliondocs
+2019-03-30 12:30:52,059 - __main__ - INFO - Storing 10000 documents in oracle finished in 13 seconds.
+2019-03-30 12:30:52,059 - __main__ - INFO - Starting Run# 5
+2019-03-30 12:30:52,226 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 12:30:52,227 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 12:31:09,223 - __main__ - INFO - inserted 10000 collections into onemilliondocs
+2019-03-30 12:31:09,223 - __main__ - INFO - Storing 10000 documents in oracle finished in 17 seconds.
+2019-03-30 12:31:09,223 - __main__ - INFO - Starting Run# 6
+2019-03-30 12:31:09,276 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 12:31:09,276 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 12:31:21,508 - __main__ - INFO - inserted 10000 collections into onemilliondocs
+2019-03-30 12:31:21,508 - __main__ - INFO - Storing 10000 documents in oracle finished in 12 seconds.
+2019-03-30 12:31:21,508 - __main__ - INFO - Starting Run# 7
+2019-03-30 12:31:21,629 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 12:31:21,629 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 12:31:31,811 - __main__ - INFO - inserted 10000 collections into onemilliondocs
+2019-03-30 12:31:31,812 - __main__ - INFO - Storing 10000 documents in oracle finished in 10 seconds.
+2019-03-30 12:31:31,812 - __main__ - INFO - Starting Run# 8
+2019-03-30 12:31:31,867 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 12:31:31,867 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 12:31:37,733 - __main__ - INFO - inserted 10000 collections into onemilliondocs
+2019-03-30 12:31:37,733 - __main__ - INFO - Storing 10000 documents in oracle finished in 6 seconds.
+2019-03-30 12:31:37,733 - __main__ - INFO - Starting Run# 9
+2019-03-30 12:31:37,816 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 12:31:37,816 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 12:31:44,143 - __main__ - INFO - inserted 10000 collections into onemilliondocs
+2019-03-30 12:31:44,143 - __main__ - INFO - Storing 10000 documents in oracle finished in 6 seconds.
+2019-03-30 12:31:44,143 - __main__ - INFO - Starting Run# 10
+2019-03-30 12:31:44,191 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 12:31:44,191 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 12:31:50,114 - __main__ - INFO - inserted 10000 collections into onemilliondocs
+2019-03-30 12:31:50,114 - __main__ - INFO - Storing 10000 documents in oracle finished in 6 seconds.
+2019-03-30 12:31:50,114 - __main__ - INFO - **** Finished The DB Insert Test ****
+2019-03-30 13:04:00,458 - __main__ - INFO - **** ************************* ****
+2019-03-30 13:04:00,459 - __main__ - INFO - **** Starting a DB Insert Test ****
+2019-03-30 13:04:00,459 - __main__ - INFO - DB: oracle
+2019-03-30 13:04:00,459 - __main__ - INFO - Number of Threads: 1
+2019-03-30 13:04:00,459 - __main__ - INFO - Number of Iterations: 10
+2019-03-30 13:04:00,459 - __main__ - INFO - Number of Messages: 1000
+2019-03-30 13:04:00,459 - __main__ - INFO - Size of Messages (chars): 100
+2019-03-30 13:04:00,459 - __main__ - INFO - generating documents...
+2019-03-30 13:04:00,488 - __main__ - INFO - 1000 documents generated as test data!
+2019-03-30 13:04:00,488 - __main__ - INFO - Initiating DB_Manager instance...
+2019-03-30 13:04:00,489 - __main__ - INFO - Retrieved the configuartion for Oracle from config.ini
+2019-03-30 13:04:00,489 - __main__ - INFO - Connecting to Oracle on: localhost:1521/ORCLPDB1
+2019-03-30 13:04:00,489 - __main__ - DEBUG - Username: json_docs
+2019-03-30 13:04:01,128 - __main__ - INFO - Connection established to Oracle on: localhost:1521/ORCLPDB1
+2019-03-30 13:04:01,128 - __main__ - INFO - Initiated the connection to oracle
+2019-03-30 13:05:07,452 - __main__ - INFO - **** ************************* ****
+2019-03-30 13:05:07,453 - __main__ - INFO - **** Starting a DB Insert Test ****
+2019-03-30 13:05:07,453 - __main__ - INFO - DB: oracle
+2019-03-30 13:05:07,453 - __main__ - INFO - Number of Threads: 1
+2019-03-30 13:05:07,453 - __main__ - INFO - Number of Iterations: 10
+2019-03-30 13:05:07,453 - __main__ - INFO - Number of Messages: 1000
+2019-03-30 13:05:07,453 - __main__ - INFO - Size of Messages (chars): 100
+2019-03-30 13:05:07,453 - __main__ - INFO - generating documents...
+2019-03-30 13:05:07,484 - __main__ - INFO - 1000 documents generated as test data!
+2019-03-30 13:05:07,484 - __main__ - INFO - Initiating DB_Manager instance...
+2019-03-30 13:05:07,485 - __main__ - INFO - Retrieved the configuartion for Oracle from config.ini
+2019-03-30 13:05:07,486 - __main__ - INFO - Connecting to Oracle on: localhost:1521/ORCLPDB1
+2019-03-30 13:05:07,486 - __main__ - DEBUG - Username: json_docs
+2019-03-30 13:05:08,070 - __main__ - INFO - Connection established to Oracle on: localhost:1521/ORCLPDB1
+2019-03-30 13:05:08,070 - __main__ - INFO - Initiated the connection to oracle
+2019-03-30 13:05:08,076 - __main__ - INFO - Starting the insert runs...
+2019-03-30 13:05:08,079 - __main__ - INFO - Starting Run# 1
+2019-03-30 13:05:08,204 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:05:08,204 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:05:08,576 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:05:08,576 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:05:30,838 - __main__ - INFO - **** ************************* ****
+2019-03-30 13:05:30,838 - __main__ - INFO - **** Starting a DB Insert Test ****
+2019-03-30 13:05:30,838 - __main__ - INFO - DB: oracle
+2019-03-30 13:05:30,838 - __main__ - INFO - Number of Threads: 1
+2019-03-30 13:05:30,838 - __main__ - INFO - Number of Iterations: 10
+2019-03-30 13:05:30,838 - __main__ - INFO - Number of Messages: 1000
+2019-03-30 13:05:30,838 - __main__ - INFO - Size of Messages (chars): 100
+2019-03-30 13:05:30,838 - __main__ - INFO - generating documents...
+2019-03-30 13:05:30,867 - __main__ - INFO - 1000 documents generated as test data!
+2019-03-30 13:05:30,867 - __main__ - INFO - Initiating DB_Manager instance...
+2019-03-30 13:05:30,868 - __main__ - INFO - Retrieved the configuartion for Oracle from config.ini
+2019-03-30 13:05:30,868 - __main__ - INFO - Connecting to Oracle on: localhost:1521/ORCLPDB1
+2019-03-30 13:05:30,868 - __main__ - DEBUG - Username: json_docs
+2019-03-30 13:05:31,480 - __main__ - INFO - Connection established to Oracle on: localhost:1521/ORCLPDB1
+2019-03-30 13:05:31,480 - __main__ - INFO - Initiated the connection to oracle
+2019-03-30 13:05:31,485 - __main__ - INFO - Starting the insert runs...
+2019-03-30 13:05:31,488 - __main__ - INFO - Starting Run# 1
+2019-03-30 13:05:31,521 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:05:31,523 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:05:31,874 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:05:31,875 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:05:31,876 - __main__ - INFO - Starting Run# 2
+2019-03-30 13:05:31,902 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:05:31,902 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:05:33,227 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:05:33,227 - __main__ - INFO - Storing 1000 documents in oracle finished in 1 seconds.
+2019-03-30 13:05:33,228 - __main__ - INFO - Starting Run# 3
+2019-03-30 13:05:33,254 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:05:33,255 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:05:33,843 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:05:33,843 - __main__ - INFO - Storing 1000 documents in oracle finished in 1 seconds.
+2019-03-30 13:05:33,844 - __main__ - INFO - Starting Run# 4
+2019-03-30 13:05:33,869 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:05:33,869 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:05:34,219 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:05:34,219 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:05:34,220 - __main__ - INFO - Starting Run# 5
+2019-03-30 13:05:34,244 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:05:34,245 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:05:34,591 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:05:34,591 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:05:34,592 - __main__ - INFO - Starting Run# 6
+2019-03-30 13:05:34,621 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:05:34,621 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:05:34,939 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:05:34,939 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:05:34,940 - __main__ - INFO - Starting Run# 7
+2019-03-30 13:05:34,965 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:05:34,965 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:05:35,293 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:05:35,293 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:05:35,294 - __main__ - INFO - Starting Run# 8
+2019-03-30 13:05:35,317 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:05:35,318 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:05:35,690 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:05:35,690 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:05:35,691 - __main__ - INFO - Starting Run# 9
+2019-03-30 13:05:35,714 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:05:35,714 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:05:36,042 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:05:36,042 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:05:36,043 - __main__ - INFO - Starting Run# 10
+2019-03-30 13:05:36,070 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:05:36,070 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:05:36,423 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:05:36,423 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:05:36,424 - __main__ - INFO - **** Finished The DB Insert Test ****
+2019-03-30 13:12:24,312 - __main__ - INFO - **** ************************* ****
+2019-03-30 13:12:24,313 - __main__ - INFO - **** Starting a DB Insert Test ****
+2019-03-30 13:12:24,313 - __main__ - INFO - DB: oracle
+2019-03-30 13:12:24,313 - __main__ - INFO - Number of Threads: 1
+2019-03-30 13:12:24,313 - __main__ - INFO - Number of Iterations: 10
+2019-03-30 13:12:24,313 - __main__ - INFO - Number of Messages: 1000
+2019-03-30 13:12:24,313 - __main__ - INFO - Size of Messages (chars): 100
+2019-03-30 13:12:24,313 - __main__ - INFO - generating documents...
+2019-03-30 13:12:24,342 - __main__ - INFO - 1000 documents generated as test data!
+2019-03-30 13:12:24,342 - __main__ - INFO - Initiating DB_Manager instance...
+2019-03-30 13:12:24,343 - __main__ - INFO - Retrieved the configuartion for Oracle from config.ini
+2019-03-30 13:12:24,343 - __main__ - INFO - Connecting to Oracle on: localhost:1521/ORCLPDB1
+2019-03-30 13:12:24,343 - __main__ - DEBUG - Username: json_docs
+2019-03-30 13:12:24,663 - __main__ - INFO - Connection established to Oracle on: localhost:1521/ORCLPDB1
+2019-03-30 13:12:24,663 - __main__ - INFO - Initiated the connection to oracle
+2019-03-30 13:12:24,668 - __main__ - INFO - Starting the insert runs...
+2019-03-30 13:12:24,671 - __main__ - INFO - Starting Run# 1
+2019-03-30 13:12:24,702 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:12:57,250 - __main__ - INFO - **** ************************* ****
+2019-03-30 13:12:57,250 - __main__ - INFO - **** Starting a DB Insert Test ****
+2019-03-30 13:12:57,250 - __main__ - INFO - DB: oracle
+2019-03-30 13:12:57,250 - __main__ - INFO - Number of Threads: 1
+2019-03-30 13:12:57,250 - __main__ - INFO - Number of Iterations: 10
+2019-03-30 13:12:57,250 - __main__ - INFO - Number of Messages: 1000
+2019-03-30 13:12:57,250 - __main__ - INFO - Size of Messages (chars): 100
+2019-03-30 13:12:57,250 - __main__ - INFO - generating documents...
+2019-03-30 13:12:57,279 - __main__ - INFO - 1000 documents generated as test data!
+2019-03-30 13:12:57,279 - __main__ - INFO - Initiating DB_Manager instance...
+2019-03-30 13:12:57,280 - __main__ - INFO - Retrieved the configuartion for Oracle from config.ini
+2019-03-30 13:12:57,280 - __main__ - INFO - Connecting to Oracle on: localhost:1521/ORCLPDB1
+2019-03-30 13:12:57,280 - __main__ - DEBUG - Username: json_docs
+2019-03-30 13:12:57,590 - __main__ - INFO - Connection established to Oracle on: localhost:1521/ORCLPDB1
+2019-03-30 13:12:57,590 - __main__ - INFO - Initiated the connection to oracle
+2019-03-30 13:12:57,595 - __main__ - INFO - Starting the insert runs...
+2019-03-30 13:12:57,598 - __main__ - INFO - Starting Run# 1
+2019-03-30 13:12:57,607 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:12:57,608 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:12:57,932 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:12:57,932 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:12:57,933 - __main__ - INFO - Starting Run# 2
+2019-03-30 13:12:57,962 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:12:57,962 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:12:58,289 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:12:58,289 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:12:58,291 - __main__ - INFO - Starting Run# 3
+2019-03-30 13:12:58,316 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:12:58,316 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:12:58,656 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:12:58,656 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:12:58,657 - __main__ - INFO - Starting Run# 4
+2019-03-30 13:12:58,682 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:12:58,682 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:12:59,012 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:12:59,012 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:12:59,014 - __main__ - INFO - Starting Run# 5
+2019-03-30 13:12:59,036 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:12:59,036 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:12:59,377 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:12:59,377 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:12:59,379 - __main__ - INFO - Starting Run# 6
+2019-03-30 13:12:59,403 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:12:59,404 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:12:59,737 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:12:59,737 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:12:59,739 - __main__ - INFO - Starting Run# 7
+2019-03-30 13:12:59,763 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:12:59,764 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:13:00,107 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:13:00,107 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:13:00,108 - __main__ - INFO - Starting Run# 8
+2019-03-30 13:13:00,134 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:13:00,134 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:13:00,480 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:13:00,480 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:13:00,481 - __main__ - INFO - Starting Run# 9
+2019-03-30 13:13:00,507 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:13:00,507 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:13:00,832 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:13:00,832 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:13:00,833 - __main__ - INFO - Starting Run# 10
+2019-03-30 13:13:00,860 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:13:00,860 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:13:01,208 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:13:01,208 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:13:01,246 - __main__ - INFO - Stored the run metadata in run_metadata_nnn.csv
+2019-03-30 13:13:01,248 - __main__ - INFO - Stored the run results in run_results_nnn.csv
+2019-03-30 13:13:01,248 - __main__ - INFO - **** Finished The DB Insert Test ****
+2019-03-30 13:26:25,418 - __main__ - INFO - **** ************************* ****
+2019-03-30 13:26:25,419 - __main__ - INFO - **** Starting a DB Insert Test ****
+2019-03-30 13:26:25,419 - __main__ - INFO - DB: oracle
+2019-03-30 13:26:25,419 - __main__ - INFO - Number of Threads: 1
+2019-03-30 13:26:25,419 - __main__ - INFO - Number of Iterations: 10
+2019-03-30 13:26:25,419 - __main__ - INFO - Number of Messages: 1000
+2019-03-30 13:26:25,419 - __main__ - INFO - Size of Messages (chars): 100
+2019-03-30 13:26:25,419 - __main__ - INFO - generating documents...
+2019-03-30 13:26:25,449 - __main__ - INFO - 1000 documents generated as test data!
+2019-03-30 13:26:25,449 - __main__ - INFO - Initiating DB_Manager instance...
+2019-03-30 13:26:25,450 - __main__ - INFO - Retrieved the configuartion for Oracle from config.ini
+2019-03-30 13:26:25,450 - __main__ - INFO - Connecting to Oracle on: localhost:1521/ORCLPDB1
+2019-03-30 13:26:25,450 - __main__ - DEBUG - Username: json_docs
+2019-03-30 13:26:26,099 - __main__ - INFO - Connection established to Oracle on: localhost:1521/ORCLPDB1
+2019-03-30 13:26:26,100 - __main__ - INFO - Initiated the connection to oracle
+2019-03-30 13:26:26,105 - __main__ - INFO - Starting the insert runs...
+2019-03-30 13:26:26,107 - __main__ - INFO - Starting Run# 1
+2019-03-30 13:26:26,238 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:26:26,239 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:26:26,610 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:26:26,610 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:26:26,611 - __main__ - INFO - Starting Run# 2
+2019-03-30 13:26:26,637 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:26:26,637 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:26:26,998 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:26:26,998 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:26:26,999 - __main__ - INFO - Starting Run# 3
+2019-03-30 13:26:27,021 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:26:27,022 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:26:27,343 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:26:27,343 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:26:27,344 - __main__ - INFO - Starting Run# 4
+2019-03-30 13:26:27,368 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:26:27,369 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:26:27,694 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:26:27,695 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:26:27,696 - __main__ - INFO - Starting Run# 5
+2019-03-30 13:26:27,718 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:26:27,718 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:26:28,034 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:26:28,034 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:26:28,035 - __main__ - INFO - Starting Run# 6
+2019-03-30 13:26:28,061 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:26:28,061 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:26:28,382 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:26:28,382 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:26:28,384 - __main__ - INFO - Starting Run# 7
+2019-03-30 13:26:28,408 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:26:28,408 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:26:28,751 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:26:28,751 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:26:28,753 - __main__ - INFO - Starting Run# 8
+2019-03-30 13:26:28,772 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:26:28,772 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:26:29,090 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:26:29,090 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:26:29,091 - __main__ - INFO - Starting Run# 9
+2019-03-30 13:26:29,114 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:26:29,114 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:26:29,436 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:26:29,436 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:26:29,437 - __main__ - INFO - Starting Run# 10
+2019-03-30 13:26:29,459 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:26:29,459 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:26:30,024 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:26:30,024 - __main__ - INFO - Storing 1000 documents in oracle finished in 1 seconds.
+2019-03-30 13:26:30,034 - __main__ - INFO - Stored the run metadata in run_metadata_'20190330132625'.csv
+2019-03-30 13:26:30,035 - __main__ - INFO - Stored the run results in run_results_'20190330132625'.csv
+2019-03-30 13:26:30,035 - __main__ - INFO - **** Finished The DB Insert Test ****
+2019-03-30 13:27:04,646 - __main__ - INFO - **** ************************* ****
+2019-03-30 13:27:04,646 - __main__ - INFO - **** Starting a DB Insert Test ****
+2019-03-30 13:27:04,646 - __main__ - INFO - DB: oracle
+2019-03-30 13:27:04,646 - __main__ - INFO - Number of Threads: 1
+2019-03-30 13:27:04,646 - __main__ - INFO - Number of Iterations: 10
+2019-03-30 13:27:04,647 - __main__ - INFO - Number of Messages: 1000
+2019-03-30 13:27:04,647 - __main__ - INFO - Size of Messages (chars): 100
+2019-03-30 13:27:04,647 - __main__ - INFO - generating documents...
+2019-03-30 13:27:04,675 - __main__ - INFO - 1000 documents generated as test data!
+2019-03-30 13:27:04,675 - __main__ - INFO - Initiating DB_Manager instance...
+2019-03-30 13:27:04,676 - __main__ - INFO - Retrieved the configuartion for Oracle from config.ini
+2019-03-30 13:27:04,676 - __main__ - INFO - Connecting to Oracle on: localhost:1521/ORCLPDB1
+2019-03-30 13:27:04,676 - __main__ - DEBUG - Username: json_docs
+2019-03-30 13:27:05,225 - __main__ - INFO - Connection established to Oracle on: localhost:1521/ORCLPDB1
+2019-03-30 13:27:05,225 - __main__ - INFO - Initiated the connection to oracle
+2019-03-30 13:27:05,230 - __main__ - INFO - Starting the insert runs...
+2019-03-30 13:27:05,233 - __main__ - INFO - Starting Run# 1
+2019-03-30 13:27:05,267 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:27:05,267 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:27:05,597 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:27:05,597 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:27:05,599 - __main__ - INFO - Starting Run# 2
+2019-03-30 13:27:05,625 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:27:05,625 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:27:05,951 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:27:05,951 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:27:05,952 - __main__ - INFO - Starting Run# 3
+2019-03-30 13:27:05,975 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:27:05,976 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:27:06,318 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:27:06,319 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:27:06,320 - __main__ - INFO - Starting Run# 4
+2019-03-30 13:27:06,345 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:27:06,345 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:27:06,708 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:27:06,708 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:27:06,709 - __main__ - INFO - Starting Run# 5
+2019-03-30 13:27:06,731 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:27:06,731 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:27:07,088 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:27:07,088 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:27:07,089 - __main__ - INFO - Starting Run# 6
+2019-03-30 13:27:07,111 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:27:07,111 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:27:07,507 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:27:07,507 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:27:07,508 - __main__ - INFO - Starting Run# 7
+2019-03-30 13:27:07,537 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:27:07,537 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:27:07,909 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:27:07,909 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:27:07,910 - __main__ - INFO - Starting Run# 8
+2019-03-30 13:27:07,935 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:27:07,935 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:27:08,380 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:27:08,381 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:27:08,382 - __main__ - INFO - Starting Run# 9
+2019-03-30 13:27:08,406 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:27:08,407 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:27:08,758 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:27:08,758 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:27:08,759 - __main__ - INFO - Starting Run# 10
+2019-03-30 13:27:08,781 - __main__ - INFO - Dropped the collection: onemilliondocs
+2019-03-30 13:27:08,782 - __main__ - INFO - Inserting the documents into onemilliondocs
+2019-03-30 13:27:09,110 - __main__ - INFO - inserted 1000 collections into onemilliondocs
+2019-03-30 13:27:09,110 - __main__ - INFO - Storing 1000 documents in oracle finished in 0 seconds.
+2019-03-30 13:27:09,120 - __main__ - INFO - Stored the run metadata in run_metadata_20190330132704.csv
+2019-03-30 13:27:09,120 - __main__ - INFO - Stored the run results in run_results_20190330132704.csv
+2019-03-30 13:27:09,121 - __main__ - INFO - **** Finished The DB Insert Test ****
+[2019-03-30 19:09:58,151,  MainThread,  __main__,  INFO] **** ************************* ****
+[2019-03-30 19:09:58,152,  MainThread,  __main__,  INFO] **** Starting a DB Insert Test ****
+[2019-03-30 19:09:58,152,  MainThread,  __main__,  INFO] DB: oracle
+[2019-03-30 19:09:58,152,  MainThread,  __main__,  INFO] Number of Threads: 4
+[2019-03-30 19:09:58,152,  MainThread,  __main__,  INFO] Number of Iterations: 10
+[2019-03-30 19:09:58,152,  MainThread,  __main__,  INFO] Number of Messages: 100000
+[2019-03-30 19:09:58,152,  MainThread,  __main__,  INFO] Size of Messages (chars): 100
+[2019-03-30 19:09:58,152,  MainThread,  __main__,  INFO] generating documents...
+[2019-03-30 19:10:01,172,  MainThread,  __main__,  INFO] 100000 documents generated as test data!
+[2019-03-30 19:10:01,172,  MainThread,  __main__,  INFO] Initiating DB_Manager instance...
+[2019-03-30 19:10:01,174,  MainThread,  __main__,  INFO] Retrieved the configuartion for Oracle from config.ini
+[2019-03-30 19:10:01,174,  MainThread,  __main__,  INFO] Connecting to Oracle on: localhost:1521/ORCLPDB1
+[2019-03-30 19:10:01,174,  MainThread,  __main__,  DEBUG] Username: json_docs
+[2019-03-30 19:13:20,774,  MainThread,  __main__,  INFO] **** ************************* ****
+[2019-03-30 19:13:20,774,  MainThread,  __main__,  INFO] **** Starting a DB Insert Test ****
+[2019-03-30 19:13:20,774,  MainThread,  __main__,  INFO] DB: oracle
+[2019-03-30 19:13:20,774,  MainThread,  __main__,  INFO] Number of Threads: 4
+[2019-03-30 19:13:20,774,  MainThread,  __main__,  INFO] Number of Iterations: 10
+[2019-03-30 19:13:20,774,  MainThread,  __main__,  INFO] Number of Messages: 100000
+[2019-03-30 19:13:20,774,  MainThread,  __main__,  INFO] Size of Messages (chars): 100
+[2019-03-30 19:13:20,774,  MainThread,  __main__,  INFO] generating documents...
+[2019-03-30 19:13:23,776,  MainThread,  __main__,  INFO] 100000 documents generated as test data!
+[2019-03-30 19:13:23,776,  MainThread,  __main__,  INFO] Initiating DB_Manager instance...
+[2019-03-30 19:13:23,778,  MainThread,  __main__,  INFO] Retrieved the configuartion for Oracle from config.ini
+[2019-03-30 19:13:23,778,  MainThread,  __main__,  INFO] Connecting to Oracle on: localhost:1521/ORCLPDB1
+[2019-03-30 19:13:23,778,  MainThread,  __main__,  DEBUG] Username: json_docs
+[2019-03-30 19:13:24,266,  MainThread,  __main__,  INFO] Initiated the connection to oracle
+[2019-03-30 19:13:24,272,  MainThread,  __main__,  INFO] Starting the insert runs...
+[2019-03-30 19:13:24,276,  MainThread,  __main__,  INFO] Starting Run# 1
+[2019-03-30 19:13:24,420,  MainThread,  __main__,  INFO] Dropped the collection: onemilliondocs
+[2019-03-30 19:13:24,422,  Thread-1,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:13:24,422,  Thread-2,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:13:24,422,  Thread-3,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:13:24,422,  Thread-4,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:14:10,449,  Thread-2,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:14:10,580,  Thread-3,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:14:10,603,  Thread-1,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:14:10,607,  Thread-4,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:14:10,608,  MainThread,  __main__,  INFO] Storing 100000 documents in oracle finished in 46 seconds.
+[2019-03-30 19:14:10,610,  MainThread,  __main__,  INFO] Starting Run# 2
+[2019-03-30 19:14:10,764,  MainThread,  __main__,  INFO] Dropped the collection: onemilliondocs
+[2019-03-30 19:14:10,765,  Thread-5,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:14:10,765,  Thread-6,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:14:10,765,  Thread-7,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:14:10,765,  Thread-8,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:14:56,367,  Thread-5,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:14:56,415,  Thread-7,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:14:56,487,  Thread-6,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:14:56,536,  Thread-8,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:14:56,536,  MainThread,  __main__,  INFO] Storing 100000 documents in oracle finished in 46 seconds.
+[2019-03-30 19:14:56,539,  MainThread,  __main__,  INFO] Starting Run# 3
+[2019-03-30 19:14:56,663,  MainThread,  __main__,  INFO] Dropped the collection: onemilliondocs
+[2019-03-30 19:14:56,664,  Thread-9,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:14:56,664,  Thread-10,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:14:56,664,  Thread-11,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:14:56,664,  Thread-12,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:15:44,074,  Thread-11,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:15:44,098,  Thread-10,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:15:44,160,  Thread-12,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:15:44,167,  Thread-9,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:15:44,167,  MainThread,  __main__,  INFO] Storing 100000 documents in oracle finished in 48 seconds.
+[2019-03-30 19:15:44,169,  MainThread,  __main__,  INFO] Starting Run# 4
+[2019-03-30 19:15:44,324,  MainThread,  __main__,  INFO] Dropped the collection: onemilliondocs
+[2019-03-30 19:15:44,324,  Thread-13,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:15:44,325,  Thread-14,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:15:44,325,  Thread-15,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:15:44,325,  Thread-16,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:16:38,000,  Thread-15,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:16:38,115,  Thread-16,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:16:38,117,  Thread-14,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:16:38,226,  Thread-13,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:16:38,226,  MainThread,  __main__,  INFO] Storing 100000 documents in oracle finished in 54 seconds.
+[2019-03-30 19:16:38,229,  MainThread,  __main__,  INFO] Starting Run# 5
+[2019-03-30 19:16:38,494,  MainThread,  __main__,  INFO] Dropped the collection: onemilliondocs
+[2019-03-30 19:16:38,494,  Thread-17,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:16:38,495,  Thread-18,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:16:38,495,  Thread-19,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:16:38,495,  Thread-20,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:17:35,097,  Thread-20,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:17:35,195,  Thread-17,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:17:35,236,  Thread-18,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:17:35,238,  Thread-19,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:17:35,238,  MainThread,  __main__,  INFO] Storing 100000 documents in oracle finished in 57 seconds.
+[2019-03-30 19:17:35,240,  MainThread,  __main__,  INFO] Starting Run# 6
+[2019-03-30 19:17:35,412,  MainThread,  __main__,  INFO] Dropped the collection: onemilliondocs
+[2019-03-30 19:17:35,412,  Thread-21,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:17:35,413,  Thread-22,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:17:35,413,  Thread-23,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:17:35,413,  Thread-24,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:18:23,603,  Thread-21,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:18:24,961,  Thread-24,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:18:24,962,  Thread-22,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:18:25,015,  Thread-23,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:18:25,015,  MainThread,  __main__,  INFO] Storing 100000 documents in oracle finished in 50 seconds.
+[2019-03-30 19:18:25,017,  MainThread,  __main__,  INFO] Starting Run# 7
+[2019-03-30 19:18:25,144,  MainThread,  __main__,  INFO] Dropped the collection: onemilliondocs
+[2019-03-30 19:18:25,144,  Thread-25,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:18:25,144,  Thread-26,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:18:25,144,  Thread-27,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:18:25,145,  Thread-28,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:19:14,249,  Thread-26,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:19:14,321,  Thread-25,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:19:14,401,  Thread-28,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:19:14,422,  Thread-27,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:19:14,422,  MainThread,  __main__,  INFO] Storing 100000 documents in oracle finished in 49 seconds.
+[2019-03-30 19:19:14,424,  MainThread,  __main__,  INFO] Starting Run# 8
+[2019-03-30 19:19:14,558,  MainThread,  __main__,  INFO] Dropped the collection: onemilliondocs
+[2019-03-30 19:19:14,559,  Thread-29,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:19:14,559,  Thread-30,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:19:14,559,  Thread-31,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:19:14,559,  Thread-32,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:20:02,645,  Thread-32,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:20:02,674,  Thread-29,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:20:02,705,  Thread-31,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:20:02,706,  Thread-30,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:20:02,706,  MainThread,  __main__,  INFO] Storing 100000 documents in oracle finished in 48 seconds.
+[2019-03-30 19:20:02,708,  MainThread,  __main__,  INFO] Starting Run# 9
+[2019-03-30 19:20:02,841,  MainThread,  __main__,  INFO] Dropped the collection: onemilliondocs
+[2019-03-30 19:20:02,842,  Thread-33,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:20:02,842,  Thread-34,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:20:02,842,  Thread-35,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:20:02,842,  Thread-36,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:20:50,361,  Thread-33,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:20:50,479,  Thread-35,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:20:50,554,  Thread-34,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:20:50,557,  Thread-36,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:20:50,557,  MainThread,  __main__,  INFO] Storing 100000 documents in oracle finished in 48 seconds.
+[2019-03-30 19:20:50,559,  MainThread,  __main__,  INFO] Starting Run# 10
+[2019-03-30 19:20:50,705,  MainThread,  __main__,  INFO] Dropped the collection: onemilliondocs
+[2019-03-30 19:20:50,705,  Thread-37,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:20:50,706,  Thread-38,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:20:50,706,  Thread-39,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:20:50,706,  Thread-40,  __main__,  INFO] Inserting the documents into onemilliondocs
+[2019-03-30 19:21:34,484,  Thread-37,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:21:34,543,  Thread-39,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:21:34,638,  Thread-38,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:21:34,651,  Thread-40,  __main__,  INFO] inserted 25000 collections into onemilliondocs
+[2019-03-30 19:21:34,651,  MainThread,  __main__,  INFO] Storing 100000 documents in oracle finished in 44 seconds.
+[2019-03-30 19:21:34,670,  MainThread,  __main__,  INFO] Stored the run metadata in run_metadata_20190330191323.csv
+[2019-03-30 19:22:05,115,  MainThread,  __main__,  INFO] Stored the run results in run_results_20190330191323.csv
+[2019-03-30 19:22:06,279,  MainThread,  __main__,  INFO] **** Finished The DB Insert Test ****

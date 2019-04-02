@@ -22,6 +22,7 @@ Vagrant.configure("2") do |config|
     mongo.vm.provision "file", source: "files/influxdb.repo", destination: "/tmp/influxdb.repo"
     mongo.vm.provision "file", source: "files/mongod.conf", destination: "/tmp/mongod.conf"
     mongo.vm.provision "file", source: "files/telegraf.conf", destination: "/tmp/telegraf.conf"
+    mongo.vm.provision "file", source: "files/OneMillionDocInsert.py", destination: "/tmp/OneMillionDocInsert.py"
     mongo.vm.provision :shell, path: "files/provision.sh"
   end
   

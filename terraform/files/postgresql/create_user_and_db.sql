@@ -1,0 +1,1 @@
+CREATE USER json_docs WITH ENCRYPTED PASSWORD 'json_docs';
