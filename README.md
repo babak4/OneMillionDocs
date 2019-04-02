@@ -16,7 +16,7 @@ You can use the <a href="https://github.com/babak4/OneMillionDocs/blob/master/On
 Oracle can handle the workload described in this test, faster than MongoDB.
 
 **Update (02-APR-19)**:
-- Adding a stand-alone Python application (See ferraform/files/loader)
+- Adding a stand-alone Python application (See terraform/files/loader)
 - Adding GCP Terraform implementation (based on a custom CentOS7/Python3.7.2 image) which runs the tests (using the Python app) *locally* inside the DB nodes.
 
 **Update (16-FEB-19)**: Kafka (single node broker with ZERO configuration changes compared to the <a href="https://kafka.apache.org/quickstart">Apache Kafka Quickstart Guide</a> proved to be 3X faster than any of the other data stores. Details coming up, soon.
