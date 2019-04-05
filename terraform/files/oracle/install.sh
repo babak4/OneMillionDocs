@@ -157,6 +157,6 @@ echo "ORACLE PASSWORD FOR SYS, SYSTEM AND PDBADMIN: $ORACLE_PASSWORD";
 
 source /home/$SSH_USER/.bashrc
 
-sqlplus system/$ORACLE_PASSWORD@localhost:1521/$ORACLE_PDB @/tmp/DDL.sql
+sqlplus sys/$ORACLE_PASSWORD@localhost:1521/$ORACLE_PDB as sysdba @/tmp/DDL.sql
 
 echo "INSTALLER: Installation complete, database ready to use!";
