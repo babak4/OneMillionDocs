@@ -15,7 +15,11 @@ You can use the <a href="https://github.com/babak4/OneMillionDocs/blob/master/On
 ### TL;DR ###
 Oracle can handle the workload described in this test, faster than MongoDB.
 
-**Update**: Kafka (single node broker with ZERO configuration changes compared to the <a href="https://kafka.apache.org/quickstart">Apache Kafka Quickstart Guide</a> proved to be 3X faster than any of the other data stores. Details coming up, soon.
+**Update (02-APR-19)**:
+- Adding a stand-alone Python application (See terraform/files/loader)
+- Adding GCP Terraform implementation (based on a custom CentOS7/Python3.7.2 image) which runs the tests (using the Python app) *locally* inside the DB nodes.
+
+**Update (16-FEB-19)**: Kafka (single node broker with ZERO configuration changes compared to the <a href="https://kafka.apache.org/quickstart">Apache Kafka Quickstart Guide</a> proved to be 3X faster than any of the other data stores. Details coming up, soon.
 
 ### Note ###
 This is an experiment based on (and not exactly the same as) a use-case that my company is dealing with, which is: numerous single JSON doc inserts in MongoDB (via large number of connections). Perhaps this is not a common use-case, although gathering high-frequency IOT data would resemble this workload.
