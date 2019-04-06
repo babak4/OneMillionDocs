@@ -15,7 +15,7 @@ resource "google_compute_instance" "mdb" {
 	boot_disk {
 		initialize_params {
 			image = "packer-1553992517"
-			size = 10
+			size = 20
 		}
 	}
 	
@@ -115,12 +115,17 @@ resource "google_compute_instance" "mdb" {
 
 	provisioner "remote-exec" {
         inline = [
-		  ". /tmp/install-python.sh",
           ". /tmp/provision.sh",
 		  "sudo gcloud auth activate-service-account --key-file /tmp/gc-cred.json",
 		  "cd ~/OneMillionDoc",
 		  "cat /dev/null > db_load_test.log",
-		  "python3.7 main.py -d mongo -n 100000 -p 4 -c bt4",
+			"python3.7 main.py -d mongo -i 5 -n 10000 -c bt4",
+			"python3.7 main.py -d mongo -i 5 -n 10000 -p 2 -c bt4",
+			"python3.7 main.py -d mongo -i 5 -n 10000 -p 4 -c bt4",
+			"python3.7 main.py -d mongo -i 5 -n 10000 -p 6 -c bt4",
+			"python3.7 main.py -d mongo -i 5 -n 10000 -p 8 -c bt4",
+			"python3.7 main.py -d mongo -i 5 -n 10000 -p 12 -c bt4",
+			"python3.7 main.py -d mongo -i 5 -n 10000 -p 16 -c bt4",
 		  "cat db_load_test.log"
         ]
         connection {

@@ -12,26 +12,29 @@ class MongoConnector:
         connectionString += "/" + config['database']
         
         self._logger.info("Connection String: " + connectionString.replace("@@@", ""))
+        self._database = config['database']
+        self._collection_name = config['tablename']
 
         if config['user'] != "" and config['password'] != "":
-            connectionString = connectionString.replace("@@@", config['user'] + ':' + config['password'] + "@")
-            connectionString += "?authSource=oneMillionDocDB"
+            self._connectionString = connectionString.replace("@@@", config['user'] + ':' + config['password'] + "@")
+            self._connectionString += "?authSource=oneMillionDocDB"
             self._logger.info("Connecting via user: " + config['user'])
         else:
-            connectionString = connectionString.replace("@@@", "")
-
-        self._connection = pymongo.MongoClient(connectionString)
-        self.database = self._connection[config['database']]
-        self._collection_name = config['tablename']
+            self._connectionString = connectionString.replace("@@@", "")
 
 
     def single_thread_insert_docs(self, document_collection):
-        collection = self.database[self._collection_name]
+        _connection = pymongo.MongoClient(self._connectionString)
+        _database = _connection[self._database]
+
+        collection = _database[self._collection_name]
+
         self._logger.info("Inserting the documents into " + self._collection_name)
         for idx in range(len(document_collection)):
             collection.insert_one(json.loads(document_collection[idx][0]))
         self._logger.info("inserted " + str(len(document_collection)) + " collections into " + self._collection_name)
 
+        _connection.close()
 
     def insert_docs(self, document_collection_chunks):
         threads = []
@@ -45,10 +48,16 @@ class MongoConnector:
 
 
     def truncate_collection(self):
-        if self._collection_name in self.database.list_collection_names():
-            collection = self.database[self._collection_name]
+
+        _connection = pymongo.MongoClient(self._connectionString)
+        _database = _connection[self._database]
+
+        if self._collection_name in _database.list_collection_names():
+            collection = _database[self._collection_name]
             collection.drop()
             self._logger.info("Dropped the collection: " + self._collection_name)
         else:
             self._logger.info("The collection " + self._collection_name + " does not exist yet.")
+        
+        _connection.close()
 
