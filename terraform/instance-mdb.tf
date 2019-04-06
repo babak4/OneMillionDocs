@@ -119,13 +119,13 @@ resource "google_compute_instance" "mdb" {
 		  "sudo gcloud auth activate-service-account --key-file /tmp/gc-cred.json",
 		  "cd ~/OneMillionDoc",
 		  "cat /dev/null > db_load_test.log",
-			"python3.7 main.py -d mongo -i 5 -n 10000 -c bt4",
-			"python3.7 main.py -d mongo -i 5 -n 10000 -p 2 -c bt4",
-			"python3.7 main.py -d mongo -i 5 -n 10000 -p 4 -c bt4",
-			"python3.7 main.py -d mongo -i 5 -n 10000 -p 6 -c bt4",
-			"python3.7 main.py -d mongo -i 5 -n 10000 -p 8 -c bt4",
-			"python3.7 main.py -d mongo -i 5 -n 10000 -p 12 -c bt4",
-			"python3.7 main.py -d mongo -i 5 -n 10000 -p 16 -c bt4",
+			"python3.7 main.py -d mongo -i 5 -n 100000 -c bt4",
+			"python3.7 main.py -d mongo -i 5 -n 100000 -p 2 -c bt4",
+			"python3.7 main.py -d mongo -i 5 -n 100000 -p 4 -c bt4",
+			"python3.7 main.py -d mongo -i 5 -n 100000 -p 6 -c bt4",
+			"python3.7 main.py -d mongo -i 5 -n 100000 -p 8 -c bt4",
+			"python3.7 main.py -d mongo -i 5 -n 100000 -p 12 -c bt4",
+			"python3.7 main.py -d mongo -i 5 -n 100000 -p 16 -c bt4",
 		  "cat db_load_test.log"
         ]
         connection {

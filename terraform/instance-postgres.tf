@@ -1,4 +1,4 @@
-3resource "google_compute_instance" "postgres" {
+resource "google_compute_instance" "postgres" {
 	name = "postgres"
 	hostname = "postgres.btg.com"
 	machine_type = "n1-standard-4"
