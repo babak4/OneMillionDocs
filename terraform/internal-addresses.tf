@@ -26,7 +26,7 @@ resource "google_compute_address" "internal_postgres" {
   address      = "10.1.2.13"
 }
 
-resource "google_compute_address" "internal_loader" {
+resource "google_compute_address" "internal_monitoring" {
   name         = "loader"
   subnetwork   = "${google_compute_subnetwork.dev.self_link}"
   address_type = "INTERNAL"

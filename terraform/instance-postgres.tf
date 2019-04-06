@@ -4,6 +4,8 @@ resource "google_compute_instance" "postgres" {
 	machine_type = "n1-standard-4"
 	zone = "${var.region_zone}"
 
+	depends_on = ["google_compute_instance.monitoring"]
+
 	network_interface {
 		subnetwork = "${google_compute_subnetwork.dev.name}"
 		network_ip = "${google_compute_address.internal_postgres.address}"
@@ -73,10 +75,41 @@ resource "google_compute_instance" "postgres" {
         }		
 	}
 
+	provisioner "file" {
+		source      = "files/monitoring-agents/provision-monitoring.sh"
+		destination = "/tmp/provision-monitoring.sh"
+        connection {
+            type = "ssh"
+            user = "${var.gce_ssh_user}"
+            private_key = "${file(var.gce_ssh_priv_key_file)}"
+        }		
+	}
+
+	provisioner "file" {
+		source      = "files/monitoring-agents/influxdb.repo"
+		destination = "/tmp/influxdb.repo"
+        connection {
+            type = "ssh"
+            user = "${var.gce_ssh_user}"
+            private_key = "${file(var.gce_ssh_priv_key_file)}"
+        }		
+	}
+
+	provisioner "file" {
+		source      = "files/monitoring-agents/telegraf.conf"
+		destination = "/tmp/telegraf.conf"
+        connection {
+            type = "ssh"
+            user = "${var.gce_ssh_user}"
+            private_key = "${file(var.gce_ssh_priv_key_file)}"
+        }		
+	}
+
     provisioner "remote-exec" {
         inline = [
                 ". /tmp/install.sh",
 				"sudo gcloud auth activate-service-account --key-file /tmp/gc-cred.json",
+				". /tmp/provision-monitoring.sh",
                 "cd ~/OneMillionDoc",
                 "cat /dev/null > db_load_test.log",
                 "python3.7 main.py -d postgres -i 5 -n 100000 -c bt4",

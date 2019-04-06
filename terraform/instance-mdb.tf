@@ -4,6 +4,8 @@ resource "google_compute_instance" "mdb" {
 	machine_type = "n1-standard-4"
 	zone = "${var.region_zone}"
 
+	depends_on = ["google_compute_instance.monitoring"]
+
 	network_interface {
 		subnetwork = "${google_compute_subnetwork.dev.name}"
 		network_ip = "${google_compute_address.internal_mongodb.address}"
@@ -54,8 +56,8 @@ resource "google_compute_instance" "mdb" {
 	}
 
 	provisioner "file" {
-		source      = "files/mdb/users_roles.js"
-		destination = "/tmp/users_roles.js"
+		source      = "files/monitoring-agents/provision-monitoring.sh"
+		destination = "/tmp/provision-monitoring.sh"
         connection {
             type = "ssh"
             user = "${var.gce_ssh_user}"
@@ -64,8 +66,8 @@ resource "google_compute_instance" "mdb" {
 	}
 
 	provisioner "file" {
-		source      = "files/loader-install/install-python.sh"
-		destination = "/tmp/install-python.sh"
+		source      = "files/mdb/users_roles.js"
+		destination = "/tmp/users_roles.js"
         connection {
             type = "ssh"
             user = "${var.gce_ssh_user}"
@@ -94,7 +96,7 @@ resource "google_compute_instance" "mdb" {
 	}
 
 	provisioner "file" {
-		source      = "files/mdb/telegraf.conf"
+		source      = "files/monitoring-agents/telegraf.conf"
 		destination = "/tmp/telegraf.conf"
         connection {
             type = "ssh"
@@ -117,16 +119,11 @@ resource "google_compute_instance" "mdb" {
         inline = [
           ". /tmp/provision.sh",
 		  "sudo gcloud auth activate-service-account --key-file /tmp/gc-cred.json",
+		  ". /tmp/provision-monitoring.sh",
 		  "cd ~/OneMillionDoc",
 		  "cat /dev/null > db_load_test.log",
-			"python3.7 main.py -d mongo -i 5 -n 100000 -c bt4",
-			"python3.7 main.py -d mongo -i 5 -n 100000 -p 2 -c bt4",
-			"python3.7 main.py -d mongo -i 5 -n 100000 -p 4 -c bt4",
-			"python3.7 main.py -d mongo -i 5 -n 100000 -p 6 -c bt4",
-			"python3.7 main.py -d mongo -i 5 -n 100000 -p 8 -c bt4",
-			"python3.7 main.py -d mongo -i 5 -n 100000 -p 12 -c bt4",
-			"python3.7 main.py -d mongo -i 5 -n 100000 -p 16 -c bt4",
-		  "cat db_load_test.log"
+		  "python3.7 main.py -d mongo -c bt4",
+		  "sudo shutdown -h now"
         ]
         connection {
             type = "ssh"

@@ -7,7 +7,7 @@ import logging
 def get_arguments (args):
         database = ""
         dop = 1
-        iterations = 10
+        iterations = 5
         message_size = 100
         message_count = 1000000
         upload_to_gcp = False
@@ -38,19 +38,23 @@ def main():
         logger.info("**** Starting a DB Insert Test ****")
 
         database, dop, iterations, message_size, message_count, upload_to_gcp, gcp_bucket = get_arguments(sys.argv[1:])
-        logger.info("DB: " + database)
-        logger.info("Number of Threads: " + str(dop))
-        logger.info("Number of Iterations: " + str(iterations))
-        logger.info("Number of Messages: " + str(message_count))
-        logger.info("Size of Messages (chars): " + str(message_size))
 
-        document_collection = DocumentCollection(logger, message_count, message_size)
-        document_collection = document_collection.generate()
+        for l_threads in [1, 2, 4, 8, 16, 24]:
+                for l_message_size in [100, 250, 500, 1000, 2500, 5000, 10000]:
+                        for l_message_no in [1000, 2500, 5000, 10000, 25000, 50000, 10000]:
+                                logger.info("DB: " + database)
+                                logger.info("Number of Threads: " + str(l_threads))
+                                logger.info("Number of Iterations: " + str(iterations))
+                                logger.info("Number of Messages: " + str(l_message_no))
+                                logger.info("Size of Messages (chars): " + str(l_message_size))
 
-        mydbHandler = DB_Manager(logger, database, dop)
-        mydbHandler.insert_documents(document_collection, iterations)
-        mydbHandler.persist_results(upload_to_gcp, gcp_bucket)
-        logger.info("**** Finished The DB Insert Test ****")
+                                document_collection = DocumentCollection(logger, message_count, message_size)
+                                document_collection = document_collection.generate()
+
+                                mydbHandler = DB_Manager(logger, database, dop)
+                                mydbHandler.insert_documents(document_collection, iterations)
+                                mydbHandler.persist_results(upload_to_gcp, gcp_bucket)
+                                logger.info("**** Finished The DB Insert Test ****")
 
 if __name__ == "__main__":
         main()
