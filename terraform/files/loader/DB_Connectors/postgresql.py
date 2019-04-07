@@ -4,7 +4,7 @@ import threading
 
 class PostgresqlConnector:
 
-    def __init__(self, logger, dop=1):
+    def __init__(self, logger):
 
         self._logger = logger
         self._logger.info("Retrieved the configuartion for Postgresql from config.ini")

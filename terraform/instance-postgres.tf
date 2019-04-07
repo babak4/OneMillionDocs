@@ -8,7 +8,6 @@ resource "google_compute_instance" "postgres" {
 
 	network_interface {
 		subnetwork = "${google_compute_subnetwork.dev.name}"
-		network_ip = "${google_compute_address.internal_postgres.address}"
 		access_config {
 			# 
 		}
@@ -76,6 +75,16 @@ resource "google_compute_instance" "postgres" {
 	}
 
 	provisioner "file" {
+		source      = "files/loader-install/run_test_suite.sh"
+		destination = "/tmp/run_test_suite.sh"
+        connection {
+            type = "ssh"
+            user = "${var.gce_ssh_user}"
+            private_key = "${file(var.gce_ssh_priv_key_file)}"
+        }		
+	}
+
+	provisioner "file" {
 		source      = "files/monitoring-agents/provision-monitoring.sh"
 		destination = "/tmp/provision-monitoring.sh"
         connection {
@@ -110,16 +119,7 @@ resource "google_compute_instance" "postgres" {
                 ". /tmp/install.sh",
 				"sudo gcloud auth activate-service-account --key-file /tmp/gc-cred.json",
 				". /tmp/provision-monitoring.sh",
-                "cd ~/OneMillionDoc",
-                "cat /dev/null > db_load_test.log",
-                "python3.7 main.py -d postgres -i 5 -n 100000 -c bt4",
-                "python3.7 main.py -d postgres -i 5 -n 100000 -p 2 -c bt4",
-                "python3.7 main.py -d postgres -i 5 -n 100000 -p 4 -c bt4",
-                "python3.7 main.py -d postgres -i 5 -n 100000 -p 6 -c bt4",
-                "python3.7 main.py -d postgres -i 5 -n 100000 -p 8 -c bt4",
-                "python3.7 main.py -d postgres -i 5 -n 100000 -p 12 -c bt4",
-                "python3.7 main.py -d postgres -i 5 -n 100000 -p 16 -c bt4",
-                "cat db_load_test.log"
+				". /tmp/run_test_suite.sh"
                 ]
         connection {
             type = "ssh"

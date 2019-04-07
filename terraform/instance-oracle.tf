@@ -8,7 +8,6 @@ resource "google_compute_instance" "oracle" {
 
 	network_interface {
 		subnetwork = "${google_compute_subnetwork.dev.name}"
-		network_ip = "${google_compute_address.internal_oracle.address}"
 		access_config {
 			# 
 		}
@@ -95,6 +94,16 @@ resource "google_compute_instance" "oracle" {
 	}
 
 	provisioner "file" {
+		source      = "files/loader-install/run_test_suite.sh"
+		destination = "/tmp/run_test_suite.sh"
+        connection {
+            type = "ssh"
+            user = "${var.gce_ssh_user}"
+            private_key = "${file(var.gce_ssh_priv_key_file)}"
+        }		
+	}
+
+	provisioner "file" {
 		source      = "files/monitoring-agents/provision-monitoring.sh"
 		destination = "/tmp/provision-monitoring.sh"
         connection {
@@ -131,18 +140,9 @@ resource "google_compute_instance" "oracle" {
 				"sudo gsutil cp gs://bt4/oracle-database-preinstall-18c-1.0-1.el7.x86_64.rpm .",
 				"sudo gsutil cp gs://bt4/LINUX.X64_180000_db_home.zip .",
 				"sudo yum reinstall -y glibc-common",
-				"cd /tmp",
-				". ./install.sh",
+				". /tmp/install.sh",
 				". /tmp/provision-monitoring.sh",
-				"cd ~/OneMillionDoc",
-				"cat /dev/null > db_load_test.log",
-				"python3.7 main.py -d oracle -i 5 -n 100000 -c bt4",
-				"python3.7 main.py -d oracle -i 5 -n 100000 -p 2 -c bt4",
-				"python3.7 main.py -d oracle -i 5 -n 100000 -p 4 -c bt4",
-				"python3.7 main.py -d oracle -i 5 -n 100000 -p 6 -c bt4",
-				"python3.7 main.py -d oracle -i 5 -n 100000 -p 8 -c bt4",
-				"python3.7 main.py -d oracle -i 5 -n 100000 -p 12 -c bt4",
-				"python3.7 main.py -d oracle -i 5 -n 100000 -p 16 -c bt4"
+				". /tmp/run_test_suite.sh"
                 ]
         connection {
             type = "ssh"

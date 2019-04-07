@@ -3,7 +3,7 @@ from DB_Connectors.config_manager import get_db_config
 import threading
 
 class MongoConnector:
-    def __init__(self, logger, dop=1):
+    def __init__(self, logger):
         self._logger = logger
         config = get_db_config("mongodb")
         self._logger.info("Retrieved the configuartion for MongoDB from config.ini")

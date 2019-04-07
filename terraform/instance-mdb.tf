@@ -8,7 +8,6 @@ resource "google_compute_instance" "mdb" {
 
 	network_interface {
 		subnetwork = "${google_compute_subnetwork.dev.name}"
-		network_ip = "${google_compute_address.internal_mongodb.address}"
 		access_config {
 			# 
 		}
@@ -86,6 +85,16 @@ resource "google_compute_instance" "mdb" {
 	}
 
 	provisioner "file" {
+		source      = "files/loader-install/run_test_suite.sh"
+		destination = "/tmp/run_test_suite.sh"
+        connection {
+            type = "ssh"
+            user = "${var.gce_ssh_user}"
+            private_key = "${file(var.gce_ssh_priv_key_file)}"
+        }		
+	}
+
+	provisioner "file" {
 		source      = "files/monitoring-agents/influxdb.repo"
 		destination = "/tmp/influxdb.repo"
         connection {
@@ -120,10 +129,7 @@ resource "google_compute_instance" "mdb" {
           ". /tmp/provision.sh",
 		  "sudo gcloud auth activate-service-account --key-file /tmp/gc-cred.json",
 		  ". /tmp/provision-monitoring.sh",
-		  "cd ~/OneMillionDoc",
-		  "cat /dev/null > db_load_test.log",
-		  "python3.7 main.py -d mongo -c bt4",
-		  "sudo shutdown -h now"
+		  ". /tmp/run_test_suite.sh"
         ]
         connection {
             type = "ssh"
