@@ -30,8 +30,17 @@ def get_arguments (args):
         return (database, dop, iterations, message_size, message_count, upload_to_gcp, gcp_bucket)
 
 def main():
+
         LOGGING_FORMAT="[%(asctime)s,  %(threadName)s,  %(levelname)s] %(message)s"
         logging.basicConfig(filename='db_load_test.log', filemode='a', level=logging.DEBUG, format=LOGGING_FORMAT)
+        
+        l_message_size_ranges = [100, 250, 500, 1000, 2500, 5000, 10000]
+        l_message_no_ranges = [1000, 2500, 5000, 10000, 25000, 50000, 10000]
+        l_thread_ranges = [1, 2, 4, 8, 16, 24]
+
+        test_count = 0
+        test_count_total = len(l_message_no_ranges) * len(l_message_size_ranges) * len(l_thread_ranges)
+
         logger = logging.getLogger(__name__)
         logger.info("**** ************************* ****")
         logger.info("**** Starting a DB Insert Test ****")
@@ -39,11 +48,12 @@ def main():
         database, _, iterations, _, _, upload_to_gcp, gcp_bucket = get_arguments(sys.argv[1:])
 
         mydbHandler = DB_Manager(logger, database)
-        for l_message_size in [100, 250, 500, 1000, 2500, 5000, 10000]:
-                for l_message_no in [1000, 2500, 5000, 10000, 25000, 50000, 10000]:
-                        for l_threads in [1, 2, 4, 8, 16, 24]:
-
-                                logger.info("DB: " + database)
+        for l_message_size in l_message_size_ranges:
+                for l_message_no in l_message_no_ranges:
+                        for l_threads in l_thread_ranges:
+                                
+                                test_count += 1
+                                logger.info("DB: " + database + ", test " + str(test_count) + " of " + str(test_count_total))
                                 logger.info("Size of Messages (chars): " + str(l_message_size))
                                 logger.info("Number of Messages: " + str(l_message_no))
                                 logger.info("Number of Threads: " + str(l_threads))
