@@ -50,6 +50,10 @@ def main():
         mydbHandler = DB_Manager(logger, database)
         for l_message_size in l_message_size_ranges:
                 for l_message_no in l_message_no_ranges:
+                        
+                        document_collection = DocumentCollection(logger, l_message_no, l_message_size)
+                        document_collection = document_collection.generate()
+
                         for l_threads in l_thread_ranges:
                                 
                                 test_count += 1
@@ -58,9 +62,6 @@ def main():
                                 logger.info("Number of Messages: " + str(l_message_no))
                                 logger.info("Number of Threads: " + str(l_threads))
                                 logger.info("Number of Iterations: " + str(iterations))
-
-                                document_collection = DocumentCollection(logger, l_message_no, l_message_size)
-                                document_collection = document_collection.generate()
 
                                 mydbHandler.insert_documents(document_collection, l_threads, iterations)
 
