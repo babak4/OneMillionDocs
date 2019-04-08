@@ -35,7 +35,7 @@ def main():
         logging.basicConfig(filename='db_load_test.log', filemode='a', level=logging.DEBUG, format=LOGGING_FORMAT)
         
         l_message_size_ranges = [100, 250, 500, 1000, 2500, 5000, 10000]
-        l_message_no_ranges = [1000, 2500, 5000, 10000, 25000, 50000, 10000]
+        l_message_no_ranges = [1000, 2500, 5000, 10000, 25000, 50000, 100000]
         l_thread_ranges = [1, 2, 4, 8, 16, 24]
 
         test_count = 0

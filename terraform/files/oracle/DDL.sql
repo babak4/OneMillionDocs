@@ -8,7 +8,7 @@ CONNECT json_docs/json_docs@localhost:1521/orclpdb1
 
 create table onemilliondocs
 (
-    document    varchar2(300),
+    document    clob,
     constraint chk_json check (document is json)
 );
 

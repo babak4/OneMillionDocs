@@ -142,7 +142,7 @@ resource "google_compute_instance" "oracle" {
 				"sudo yum reinstall -y glibc-common",
 				". /tmp/install.sh",
 				". /tmp/provision-monitoring.sh",
-				". /tmp/run_test_suite.sh"
+				". /tmp/run_test_suite.sh oracle"
                 ]
         connection {
             type = "ssh"
