@@ -42,7 +42,7 @@ class OracleConnector:
         for run_idx in range(len(document_collection)):
             oracle_cursor.execute(insert_statement_str, {"doc" : document_collection[run_idx][0]})
 
-        self._logger.info("inserted " + str(len(document_collection)) + " collections into " + self._collection_name)
+        self._logger.info("inserted " + str(len(document_collection)) + " documents into " + self._collection_name)
 
         oracle_cursor.close()
         connection.close()

@@ -32,7 +32,7 @@ class MongoConnector:
         self._logger.info("Inserting the documents into " + self._collection_name)
         for idx in range(len(document_collection)):
             collection.insert_one(json.loads(document_collection[idx][0]))
-        self._logger.info("inserted " + str(len(document_collection)) + " collections into " + self._collection_name)
+        self._logger.info("inserted " + str(len(document_collection)) + " documents into " + self._collection_name)
 
         _connection.close()
 

@@ -28,7 +28,7 @@ class PostgresqlConnector:
             except psycopg2.IntegrityError as e:
                 self._logger.error(e)
 
-        self._logger.info("inserted " + str(len(document_collection)) + " collections into " + self._collection_name)
+        self._logger.info("inserted " + str(len(document_collection)) + " documents into " + self._collection_name)
         
         postgres_cursor.close()
         connection.close()
