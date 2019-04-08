@@ -129,7 +129,7 @@ resource "google_compute_instance" "mdb" {
           ". /tmp/provision.sh",
 		  "sudo gcloud auth activate-service-account --key-file /tmp/gc-cred.json",
 		  ". /tmp/provision-monitoring.sh",
-		  ". /tmp/run_test_suite.sh"
+		  ". /tmp/run_test_suite.sh mongo"
         ]
         connection {
             type = "ssh"
