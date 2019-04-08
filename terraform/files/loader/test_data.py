@@ -67,4 +67,3 @@ class DocumentCollection:
             print(self._document_collection[0])
         else:
             print("Object is not instantiated!")
-    pass

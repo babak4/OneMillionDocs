@@ -56,7 +56,7 @@ class DB_Manager:
             self.db_instance.truncate_collection()
 
             execution_time = execute_and_time(self.db_instance.insert_docs, (document_collection_chunks, ), "Storing " + str(len(document_collection)) + " documents in " + self._db_name, self._logger)
-            self._runResults = self._runResults.append({'run id': self._run_id, 'db_name': self._db_name, 'number of threads': self._dop, 'doc size': len(str(document_collection[0])), 'number of docs': len(document_collection), 'iteration': run_idx + 1, 'time':  execution_time}, ignore_index=True)
+            self._runResults = self._runResults.append({'run id': self._run_id, 'db_name': self._db_name, 'number of threads': self._dop, 'doc size': len(str(document_collection[0][0])), 'number of docs': len(document_collection), 'iteration': run_idx + 1, 'time':  execution_time}, ignore_index=True)
         
         self.persist_results()
 
@@ -68,4 +68,6 @@ class DB_Manager:
 
     
     def upload_to_gcp(self, gcp_bucket):
-            os.system("sudo gsutil cp {} gs://{}".format(self._runResults_file, gcp_bucket))
+        upload_command = "sudo gsutil cp {} gs://{}".format(self._runResults_file, gcp_bucket)
+        self._logger.info("Upload Command: {}".format(upload_command))
+        os.system(upload_command)
