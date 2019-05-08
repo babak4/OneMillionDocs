@@ -15,6 +15,22 @@ You can use the <a href="https://github.com/babak4/OneMillionDocs/blob/master/On
 ### TL;DR ###
 Oracle can handle the workload described in this test, faster than MongoDB.
 
+**Update (08-MAY-19)**:
+- Adding new invocation method. Run using the following command:
+    ". /tmp/run_test_suite.sh [postgres|oracle|mongo]"
+- The test script would run a suite of tests on the requested DB, using a range of message sizes, message numbers, and connection numbers.
+    - Range of message sizes: 100, 250, 500, 1000, 2500, 5000, 10000 (Bytes)
+    - Range of message numbers (per insert iteration): 1000, 2500, 5000, 10000, 25000, 50000, 100000
+    - Range of number of connections: 1, 2, 4, 8, 16, 24
+- The test results will be stored in a csv and can be uploaded to a GCP bucket.
+- The test suite script runs the ~/OneMillionDocs/main.py application which can be invoked independently using the following options:
+    - -d, --database - options are the same as above
+    - -p, --degree-of-parallelism - Default value: 1 (i.e. inserting using a single connection)
+    - -i, --iterations - How many times a test for a combination of (message size, message number, number of connections) is carried out. Default value: 5
+    - -s, --message-size - Default value: 100 (Bytes)
+    - -n, --number-of-messages - Default value: 1,000,000 (hence, "OneMillionDocs")
+    - -c, --upload-results-to-gcp - accepts bucket name. No default values; i.e. will not attempt to upload the results into GCP bucket unless explicitly mentioned.
+
 **Update (02-APR-19)**:
 - Adding a stand-alone Python application (See terraform/files/loader)
 - Adding GCP Terraform implementation (based on a custom CentOS7/Python3.7.2 image) which runs the tests (using the Python app) *locally* inside the DB nodes.
