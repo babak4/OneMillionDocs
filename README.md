@@ -54,7 +54,7 @@ Because I'm trying to use MongoDB (which is currently in production in our envir
 ### The Environment ###
 **Clients:**
 * Python via (this) Jupyter Notebook
-    * Python 3.6.6
+    * Python 3.6.6 (3.7.2 on GCP instances)
     * PyMongo 3.7.2
     * psycopg 2.7.7
     * cx_oracle 7.1
