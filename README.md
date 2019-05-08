@@ -3,7 +3,7 @@
 ## on MongoDB(4.0.6), PostgreSQL(11.2), and Oracle (18.3)
 
 Babak Tourani (babak4@gmail.com)<br/>
-Feb 2019
+May 2019
 
 **Disclaimer**: This is NOT a benchmark test! 
 
@@ -30,6 +30,7 @@ Oracle can handle the workload described in this test, faster than MongoDB.
     - -s, --message-size - Default value: 100 (Bytes)
     - -n, --number-of-messages - Default value: 1,000,000 (hence, "OneMillionDocs")
     - -c, --upload-results-to-gcp - accepts bucket name. No default values; i.e. will not attempt to upload the results into GCP bucket unless explicitly mentioned.
+- The ~/OneMillionDocs/main.py (and therefore the test suite script) will shutdown the server after the test.
 
 **Update (02-APR-19)**:
 - Adding a stand-alone Python application (See terraform/files/loader)
