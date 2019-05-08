@@ -43,7 +43,7 @@ class DB_Manager:
         self._logger.info("Initiated the connection to " + db_name)
 
 
-    def insert_documents(self, document_collection, dop, iterations=10):
+    def insert_documents(self, document_collection, dop, iterations):
 
         self._logger.info("Starting the insert runs...")
         self._dop = dop
