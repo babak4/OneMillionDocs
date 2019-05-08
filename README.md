@@ -60,10 +60,11 @@ Because I'm trying to use MongoDB (which is currently in production in our envir
     * cx_oracle 7.1
     
 **Servers/Guests:**
-* Oracle Linux VirtualBox via Vagrant
+* Local: Oracle Linux VirtualBox via Vagrant
     * At the time of the test using "ol7-latest" would lead to creation of Oracle Linux 7.6 boxes.
-* Two cores
-* Four GBs of RAM
+    * Two cores
+    * Four GBs of RAM
+* GCP: n1-standard-4 instances with centos-7-v20190326 image and Python 3.7.2 (referenced as "packer-1553992517" in Terraform scripts)
 
 **Host:**
 * Macbook Pro Late 2013 (2.3 GHz i7 - 16GB 1600MHz DDR3)
