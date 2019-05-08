@@ -118,8 +118,7 @@ resource "google_compute_instance" "postgres" {
         inline = [
                 ". /tmp/install.sh",
 				"sudo gcloud auth activate-service-account --key-file /tmp/gc-cred.json",
-				". /tmp/provision-monitoring.sh",
-				". /tmp/run_test_suite.sh postgres"
+				". /tmp/provision-monitoring.sh"
                 ]
         connection {
             type = "ssh"

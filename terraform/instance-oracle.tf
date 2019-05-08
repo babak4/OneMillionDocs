@@ -141,8 +141,7 @@ resource "google_compute_instance" "oracle" {
 				"sudo gsutil cp gs://bt4/LINUX.X64_180000_db_home.zip .",
 				"sudo yum reinstall -y glibc-common",
 				". /tmp/install.sh",
-				". /tmp/provision-monitoring.sh",
-				". /tmp/run_test_suite.sh oracle"
+				". /tmp/provision-monitoring.sh"
                 ]
         connection {
             type = "ssh"
